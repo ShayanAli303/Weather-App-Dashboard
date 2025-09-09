@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather Flow</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+  <header class="topbar">
+    <button id="backBtn" class="back"><⬅</button>
+    <div class="title">Weather App    </div>
+    <button id="themeToggle" class="theme-toggle">🌙</button>
+  </header>
+
+  <main class="app">
+    <section class="left-pane" id="globePane">
+      <div id="globeWrap">
+        <canvas id="globeCanvas"></canvas>
+        <div id="particlesLite"></div>
+      </div>
+
+      <div class="controls">
+        <div class="search-group">
+          <input id="cityInput" placeholder="Search city (e.g. Karachi, Tokyo)" autocomplete="off" />
+          <div id="suggestions" class="suggestions"></div>
+        </div>
+        <div class="btn-row">
+          <button id="searchBtn" class="btn primary">Search</button>
+          <button id="locBtn" class="btn ghost">Use my location</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="right-pane" id="mapPane" aria-hidden="true">
+      <div id="map" class="map"></div>
+      <div id="weatherPanel" class="weather-panel">
+        <div class="weather-head">
+          <h3 id="w-city">—</h3>
+          <div id="w-now" class="w-now"></div>
+        </div>
+        <div id="w-details" class="w-details"></div>
+        <div id="w-more" class="w-more"></div>
+        <div id="w-forecast" class="w-forecast"></div>
+      </div>
+    </section>
+
+    <div id="loadingOverlay" class="loading-overlay hidden">
+      <div class="loader">
+        <div class="pulse"></div>
+        <div class="loading-text">Loading map & weather…</div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://unpkg.com/three@0.155.0/build/three.min.js"></script>
+  <script src="https://unpkg.com/gsap@3.12.2/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
