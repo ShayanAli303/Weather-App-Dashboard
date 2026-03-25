@@ -1,4 +1,4 @@
-#Weather-App-Dashboard
+# Weather-App-Dashboard
 
 A responsive Weather Forecast Web App built using HTML, CSS & JavaScript. This app provides real-time weather updates and a 3-day forecast, featuring icons, dark/light mode, and detailed weather panels. Developed as part of my Elevvo Internship to strengthen frontend development skills and API integration experience.
 Features
